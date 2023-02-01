@@ -1,3 +1,4 @@
+/* eslint-disable max-classes-per-file */
 const { v4: uuidv4 } = require('uuid');
 
 class ProductAlreadyExistsError extends Error {
@@ -36,10 +37,11 @@ class ProductManager {
   }
 
   addProduct(title, description, price, thumbnail, code, stock) {
+    // eslint-disable-next-line array-callback-return
     this.products.some((product) => {
       if (product.code === code) {
         throw new ProductAlreadyExistsError(
-          `Ya existe un producto con ese código > ${code}`
+          `Ya existe un producto con ese código > ${code}`,
         );
       }
     });
@@ -50,7 +52,7 @@ class ProductManager {
       price,
       thumbnail,
       code,
-      stock
+      stock,
     );
 
     this.products.push(newProduct);
@@ -59,11 +61,11 @@ class ProductManager {
 
   getProductById(id) {
     for (let i = 0; i < this.products.length; i++) {
-      let product = this.products[i];
+      const product = this.products[i];
       if (product.id === id) return product;
     }
     throw new NoIdRegisteredError(
-      `No hay registro de  algún producto con id > ${id}`
+      `No hay registro de  algún producto con id > ${id}`,
     );
   }
 }
@@ -71,7 +73,7 @@ class ProductManager {
 // main program
 try {
   const manager = new ProductManager();
-  console.log(`Productos:`);
+  console.log('Productos:');
   console.log(manager.getProducts());
 
   manager.addProduct(
@@ -80,13 +82,13 @@ try {
     200,
     'Sin imagen',
     'abc123',
-    25
+    25,
   );
   console.log('\n----------------------------');
   console.log('|  se agrego un producto!  |');
   console.log('----------------------------\n');
 
-  console.log(`Productos:`);
+  console.log('Productos:');
   console.log(manager.getProducts());
   console.log();
 
@@ -103,7 +105,7 @@ try {
     200,
     'Sin imagen',
     'abc123',
-    25
+    25,
   );
 } catch (err) {
   if (err instanceof ProductAlreadyExistsError) {
