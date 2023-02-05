@@ -1,0 +1,94 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Product A",
+      "description": "This is a description of Product A",
+      "price": 49.99,
+      "thumbnail": "https://example.com/product-a.jpg",
+      "code": "A-123",
+      "stock": 10
+    },
+    {
+      "id": 2,
+      "title": "Product B",
+      "description": "This is a description of Product B",
+      "price": 29.99,
+      "thumbnail": "https://example.com/product-b.jpg",
+      "code": "B-456",
+      "stock": 5
+    },
+    {
+      "id": 3,
+      "title": "Product C",
+      "description": "This is a description of Product C",
+      "price": 39.99,
+      "thumbnail": "https://example.com/product-c.jpg",
+      "code": "C-789",
+      "stock": 20
+    },
+    {
+      "id": 4,
+      "title": "Product D",
+      "description": "This is a description of Product D",
+      "price": 59.99,
+      "thumbnail": "https://example.com/product-d.jpg",
+      "code": "D-246",
+      "stock": 15
+    },
+    {
+      "id": 5,
+      "title": "Product E",
+      "description": "This is a description of Product E",
+      "price": 69.99,
+      "thumbnail": "https://example.com/product-e.jpg",
+      "code": "E-369",
+      "stock": 25
+    },
+    {
+      "id": 6,
+      "title": "Product F",
+      "description": "This is a description of Product F",
+      "price": 79.99,
+      "thumbnail": "https://example.com/product-f.jpg",
+      "code": "F-159",
+      "stock": 30
+    },
+    {
+      "id": 7,
+      "title": "Product G",
+      "description": "This is a description of Product G",
+      "price": 89.99,
+      "thumbnail": "https://example.com/product-g.jpg",
+      "code": "G-753",
+      "stock": 35
+    },
+    {
+      "id": 8,
+      "title": "Product H",
+      "description": "This is a description of Product H",
+      "price": 99.99,
+      "thumbnail": "https://example.com/product-h.jpg",
+      "code": "H-926",
+      "stock": 40
+    },
+    {
+      "id": 9,
+      "title": "Product I",
+      "description": "This is a description of Product I",
+      "price": 119.99,
+      "thumbnail": "https://example.com/product-i.jpg",
+      "code": "I-847",
+      "stock": 45
+    },
+    {
+      "id": 10,
+      "title": "Product I",
+      "description": "This is a description of Product I",
+      "price": 119.99,
+      "thumbnail": "https://example.com/product-i.jpg",
+      "code": "I-847",
+      "stock": 45
+    }
+  ]
+}

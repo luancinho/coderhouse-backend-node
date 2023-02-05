@@ -82,7 +82,7 @@ class ProductManager {
   async loadData() {
     try {
       const data = await fs.readFile(this.path, 'utf-8');
-      this.#products = data === '' ? [] : JSON.parse(data);
+      this.#products = data === '' ? [] : JSON.parse(data).products;
     } catch (err) {
       console.log(err.message);
     }
