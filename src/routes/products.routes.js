@@ -1,8 +1,14 @@
 const { Router } = require('express');
-const { productsGet } = require('../controllers/products.controller');
+const {
+  getProducts,
+  getProductById,
+} = require('../controllers/products.controller');
+const validateId = require('../middleware/id.middleware');
 
 const router = new Router();
 
-router.get('/', productsGet);
+router.get('/', getProducts);
+
+router.get('/:id', validateId, getProductById);
 
 module.exports = router;

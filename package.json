@@ -2,9 +2,9 @@
   "name": "coderhouse-backend-node",
   "version": "1.0.0",
   "description": "",
-  "main": "desafio01.js",
+  "main": "src/app.js",
   "scripts": {
-    "start": "node ./src/entregable02/app.js",
+    "start": "nodemon ./src/app.js",
     "eslint": "eslint ./src/**",
     "eslint:fix": "eslint ./src/** --fix",
     "test": "jest --collectCoverage=false --verbose"

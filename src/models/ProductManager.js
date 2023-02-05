@@ -1,5 +1,6 @@
 /* eslint-disable lines-between-class-members */
 const fs = require('fs').promises;
+const { IdError, DatabaseError } = require('../helpers/errors.helpers');
 
 class ProductManager {
   static #products;
@@ -23,9 +24,21 @@ class ProductManager {
       const data = await fs.readFile(ProductManager.#path, 'utf-8');
       const object = data === '' ? [] : JSON.parse(data);
       ProductManager.#products = object.products;
-      console.log(ProductManager.#products);
     } catch (err) {
-      console.log(err.message);
+      throw new DatabaseError(err.message);
+    }
+  }
+
+  static async getById(id) {
+    try {
+      await ProductManager.loadData();
+      const result = ProductManager.#products.find(
+        (product) => product.id === id,
+      );
+      if (result) return result;
+      throw new IdError(`There is no product with id #${id}`);
+    } catch (err) {
+      throw new DatabaseError(err.message);
     }
   }
 }
